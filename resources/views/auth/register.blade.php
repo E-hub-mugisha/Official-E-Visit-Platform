@@ -556,6 +556,23 @@
                         </div>
                     </div>
 
+                    <div class="col-12">
+                        <label for="role" class="form-label">
+                            Your Role <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-envelope input-icon"></i>
+                            <select name="role" class="form-control" id="role"required>
+                                <option value="admin">Admin</option>
+                                <option value="guard">Guard</option>
+                                <option value="visitor">Visitor</option>
+                            </select>
+                            @error('role')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
                     <!-- Password -->
                     <div class="col-md-6">
                         <label for="password" class="form-label">
